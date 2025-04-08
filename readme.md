@@ -23,7 +23,7 @@ brain-tumor-segmentation/
 ├── outputs/                      # Diagrams, results, or processed images
 ├── model_brain_mri.pth           # Trained model file 
 
-git clone https://github.com/YourUsername/brain-tumor-segmentation.git
+git clone https://github.com/Theepankumargandhi/brain-tumor-segmentation
 cd brain-tumor-segmentation
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
