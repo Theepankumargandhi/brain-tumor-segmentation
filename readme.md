@@ -1,19 +1,38 @@
-This project uses a ResNeXt50-UNet model to segment brain tumors from MRI images. The model is deployed as a web app built with Streamlit, allowing users to upload MRI images and instantly view the tumor segmentation mask.
+#  Brain Tumor Segmentation using ResNeXt50-UNet (Streamlit App)
 
-Key Features
-Model: ResNeXt50 encoder with a UNet-style decoder for pixel-level tumor segmentation.
+This project is focused on segmenting brain tumors from MRI images using a deep learning model that combines **ResNeXt50** as the encoder and a **UNet-style** decoder for pixel-level tumor prediction. The model is trained on the **LGG MRI Segmentation Dataset** and predicts tumor regions effectively.
 
-Interactive Web App: Built with Streamlit to easily upload MRI images and get segmentation results.
+A **Streamlit web app** allows users to upload MRI images, process them through the trained model, and view the segmented brain tumor mask in real-time.
 
-Training Dataset: LGG MRI dataset from Kaggle used to train the model for tumor detection.
+##  Features
+- **Upload MRI images** and see the predicted brain tumor segmentation mask.
+- Uses **ResNeXt50** as the encoder and **UNet** as the decoder for tumor segmentation.
+- Built with **Streamlit** for a simple and interactive user interface.
+- Visualizes the **segmented tumor mask** over the original MRI image.
+- Efficient preprocessing and model inference.
 
+## 📁 Folder Structure
 
-git clone https://github.com/<your-username>/brain-tumor-segmentation.git
-Install dependencies:
+brain-tumor-segmentation/
+│
+├── README.md                     # Project documentation
+├── requirements.txt              # Dependency list
+├── app/
+│   └── streamlit_app.py          # Streamlit user interface
+├── model.py                      # Model definition (ResNeXt50-UNet)
+├── outputs/                      # Diagrams, results, or processed images
+├── model_brain_mri.pth           # Trained model file 
+
+git clone https://github.com/YourUsername/brain-tumor-segmentation.git
+cd brain-tumor-segmentation
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-Run the Streamlit app:
-streamlit run app.py
-Upload an MRI image to see the predicted tumor mask.
-The model uses a combination of ResNeXt50 for feature extraction and a UNet decoder for segmentation.
-The output is a binary mask indicating tumor presence.
+streamlit run app/streamlit_app.py
 
+Use Cases:
+Medical imaging: Segmenting brain tumors for diagnostic purposes.
+
+Healthcare AI: Automating the process of tumor detection in MRI images.
+
+Deep learning in healthcare: A demonstration of applying modern deep learning techniques to medical data.
